@@ -1,0 +1,107 @@
+/* General Styles for CourseCard */
+.course-card {
+  background-color: white;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Image */
+.course-card__image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eaeaea; /* Adds separation between the image and content */
+}
+
+/* Course Content Container */
+.course-card__content {
+  padding: 15px;
+}
+
+/* Course Title */
+.course-card__title {
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Course Description */
+.course-card__description {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.4; /* Improves readability */
+}
+
+/* Footer Section: Price and AddToBasketButton */
+.course-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Course Price */
+.course-card__price {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #006c6c;
+}
+
+/* Success Message Placeholder (Retained for Context) */
+.course-card__message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #28a745; /* Success green */
+  text-align: center;
+  animation: fadeInOut 2s ease-in-out; /* Smooth fade effect */
+}
+
+/* Keyframes for Message Animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .course-card {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow on smaller screens */
+  }
+
+  .course-card__title {
+    font-size: 1rem; /* Slightly smaller title for mobile */
+  }
+
+  .course-card__description {
+    font-size: 0.85rem; /* Adjust font size for readability */
+  }
+
+  .course-card__price {
+    font-size: 0.9rem;
+  }
+}
+

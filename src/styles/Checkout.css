@@ -1,0 +1,135 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Checkout Container */
+.checkout-container {
+  position: relative;
+  padding: 20px;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #f9f9f9; /* Light background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  z-index: 1; /* Stays below the success message */
+}
+
+/* Form Title */
+h1 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Checkout Form Styles */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between fields */
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.input-field,
+.select-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-field:focus,
+.select-field:focus {
+  border-color: #006c6c;
+  outline: none;
+}
+
+/* Error Text */
+.error-text {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Submit Button */
+.submit-button {
+  background-color: #006c6c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #004c4c;
+}
+
+/* Conditional Payment Section Styles */
+.bank-transfer-details {
+  margin-top: 20px;
+}
+
+.bank-transfer-details label {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Success Message */
+.success-message {
+  position: fixed;
+  top: 270px;
+  right: 20px;
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.success-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Failure Message */
+.failure-message {
+  position: fixed;
+  top: 270px; /* Positioned slightly below the success message */
+  right: 20px;
+  background-color: #f44336; /* Red background */
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.failure-message.show {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,176 @@
+{
+    "categories": [
+      {
+        "id": "electrical",
+        "name": "Электрика",
+        "image": "/images/electrical.jpg",
+        "courses": [
+          {
+            "id": "lighting-fixtures",
+            "name": "Монтаж осветительных приборов",
+            "description": "Научитесь устанавливать осветительные приборы для дома.",
+            "image": "/images/hanging-light-fixture.jpg",
+            "price": "5500 сом",
+            "duration": "2 дня"
+          },
+          {
+            "id": "drilling-basics",
+            "name": "Работа с дрелью",
+            "description": "Освойте основы сверления для различных материалов.",
+            "image": "/images/drills.jpg",
+            "price": "4000 сом",
+            "duration": "1 день"
+          }
+        ]
+      },
+      {
+        "id": "plumbing",
+        "name": "Сантехника",
+        "image": "/images/plumbing.jpg",
+        "courses": [
+          {
+            "id": "pipe-installation",
+            "name": "Установка труб",
+            "description": "Изучите процесс установки и ремонта труб.",
+            "image": "/images/pipe-installation.jpg",
+            "price": "6000 сом",
+            "duration": "3 дня"
+          },
+          {
+            "id": "leak-repair",
+            "name": "Устранение утечек",
+            "description": "Научитесь устранять утечки воды.",
+            "image": "/images/leak-repair.jpg",
+            "price": "5000 сом",
+            "duration": "2 дня"
+          },
+          {
+            "id": "bathroom-installation",
+            "name": "Установка ванной комнаты",
+            "description": "Обучение установке сантехнического оборудования в ванной.",
+            "image": "/images/bathroom-installation.jpg",
+            "price": "9000 сом",
+            "duration": "5 дней"
+          }
+        ]
+      },
+      {
+        "id": "carpentry",
+        "name": "Плотницкие работы",
+        "image": "/images/carpentry.jpg",
+        "courses": [
+          {
+            "id": "door-installation",
+            "name": "Установка дверей",
+            "description": "Практическое обучение установке межкомнатных и входных дверей.",
+            "image": "/images/door-installation.jpg",
+            "price": "5000 сом",
+            "duration": "2 дня"
+          },
+          {
+            "id": "furniture-repair",
+            "name": "Ремонт мебели",
+            "description": "Научитесь восстанавливать мебель и исправлять повреждения.",
+            "image": "/images/furniture-repair.jpg",
+            "price": "4500 сом",
+            "duration": "3 дня"
+          },
+          {
+            "id": "cabinet-making",
+            "name": "Изготовление шкафов",
+            "description": "Изучите основы проектирования и сборки шкафов.",
+            "image": "/images/cabinet-making.jpg",
+            "price": "7000 сом",
+            "duration": "4 дня"
+          },
+          {
+            "id": "kitchen-installation",
+            "name": "Установка кухни",
+            "description": "Практическое обучение сборке и установке кухонной мебели.",
+            "image": "/images/kitchen-installation.jpg",
+            "price": "8000 сом",
+            "duration": "4 дня"
+          }
+        ]
+      },
+      {
+        "id": "house-maintenance",
+        "name": "Домашнее обслуживание",
+        "image": "/images/house-maintenance.jpg",
+        "courses": [
+          {
+            "id": "blinds-installation",
+            "name": "Установка жалюзи",
+            "description": "Научитесь устанавливать жалюзи и занавески.",
+            "image": "/images/blinds.jpg",
+            "price": "4000 сом",
+            "duration": "1 день"
+          },
+          {
+            "id": "basic-repairs",
+            "name": "Основы ремонта дома",
+            "description": "Изучите базовые навыки ремонта дома и устранения повреждений.",
+            "image": "/images/maintenance2.jpg",
+            "price": "4500 сом",
+            "duration": "2 дня"
+          },
+          {
+            "id": "wallpapering-course",
+            "name": "Курс по поклейке обоев",
+            "description": "Освойте навыки поклейки обоев для любого интерьера.",
+            "image": "/images/wallpaper.jpg",
+            "price": "5000 сом",
+            "duration": "3 дня"
+          }
+          
+        ]
+      },
+      {
+        "id": "tiling",
+        "name": "Плиточные работы",
+        "image": "/images/tiling3.jpg",
+        "courses": [
+          {
+            "id": "tile-laying",
+            "name": "Укладка плитки",
+            "description": "Изучите технику укладки плитки для полов и стен.",
+            "image": "/images/tiling1.jpg",
+            "price": "6000 сом",
+            "duration": "3 дня"
+          },
+          {
+            "id": "tile-polishing",
+            "name": "Шлифовка плитки",
+            "description": "Научитесь шлифовать плитку для профессиональной отделки.",
+            "image": "/images/shlifovka.jpg",
+            "price": "5500 сом",
+            "duration": "2 дня"
+          }
+        ]
+      },
+      {
+        "id": "masonry",
+        "name": "Кирпичная кладка",
+        "image": "/images/masonry.jpg",
+        "courses": [
+          {
+            "id": "bricklaying",
+            "name": "Кирпичная кладка",
+            "description": "Изучите процесс кладки кирпичей для создания прочных стен.",
+            "image": "/images/bricklaying.jpg",
+            "price": "7000 сом",
+            "duration": "3 дня"
+          },
+          {
+            "id": "wall-repair",
+            "name": "Ремонт стен",
+            "description": "Научитесь ремонтировать и восстанавливать стены.",
+            "image": "/images/wall-repair.jpg",
+            "price": "6500 сом",
+            "duration": "2 дня"
+          }
+        ]
+      }
+    ]
+  }
+  

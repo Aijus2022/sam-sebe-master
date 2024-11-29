@@ -1,0 +1,50 @@
+/* Default Button Style */
+.add-to-basket-button {
+  background-color: #006c6c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+/* Hover State */
+.add-to-basket-button:hover {
+  background-color: #004c4c;
+}
+
+/* Clicked State */
+.add-to-basket-button.clicked {
+  background-color: #28a745; /* Green for success */
+  transform: scale(1.05);
+}
+
+/* Success Message */
+.add-to-basket-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #28a745; /* Success green */
+  animation: fadeInOut 2s ease-in-out;
+}
+
+/* Fade-In-Out Animation */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
