@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useBasket } from "../context/BasketContext"; // Access BasketContext
-import "../styles/AddToBasketButton.css"; // Separate button styles
 
 const AddToBasketButton = ({ id, image, title, price }) => {
   const { addItem } = useBasket(); // Get the addItem function
@@ -20,18 +19,22 @@ const AddToBasketButton = ({ id, image, title, price }) => {
   };
 
   return (
-    <div className="add-to-basket-container">
+    <div className="relative flex flex-col items-center">
       <button
-        className={`add-to-basket-button ${added ? "clicked" : ""}`}
         onClick={handleAddToBasket}
+        className={`px-6 py-2 text-white font-bold rounded-lg transition ${
+          added ? "bg-green-500 cursor-default" : "bg-blue-600 hover:bg-blue-700"
+        }`}
+        disabled={added}
       >
         {added ? "Добавлено!" : "Добавить в корзину"}
       </button>
       {showMessage && (
-        <p className="add-to-basket-message">Товар добавлен в корзину!</p>
+        <p className="mt-2 text-sm text-green-600">Товар добавлен в корзину!</p>
       )}
     </div>
   );
 };
 
 export default AddToBasketButton;
+

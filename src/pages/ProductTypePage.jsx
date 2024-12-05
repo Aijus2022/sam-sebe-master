@@ -1,49 +1,50 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import coursesData from "../data/courses.json"; // Import the JSON data
-import CourseCard from "../components/CourseCard"; // Import the CourseCard component
-import "../styles/ProductTypePage.css"; // Import CSS
+import React from "react";
+import { useParams, Link } from "react-router-dom";
+import coursesData from "../data/courses.json";
 
 const ProductTypePage = () => {
-  const { category } = useParams(); // Extract the category ID from the URL
-  const [categoryData, setCategoryData] = useState(null);
+  const { category } = useParams(); // Extract category from URL
 
-  useEffect(() => {
-    // Find the category data in the JSON file
-    const foundCategory = coursesData.categories.find((cat) => cat.id === category);
-    setCategoryData(foundCategory); // Set the category data
-  }, [category]);
+  // Find the matching category
+  const selectedCategory = coursesData.categories.find(
+    (cat) => cat.id === category
+  );
 
-  if (!categoryData) {
-    return <p>Загрузка...</p>; // Loading message in Russian
+  // Handle case where category is not found
+  if (!selectedCategory) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-red-600">Категория не найдена</h1>
+        <p className="text-gray-700">Пожалуйста, выберите другую категорию.</p>
+      </div>
+    );
   }
 
   return (
-    <div className="category-page">
-      {/* Hero Section */}
-      <div className="category-hero">
-        <img
-          src={categoryData.image} // Use the hero image from JSON
-          alt={`Изображение категории ${categoryData.name}`}
-          className="category-hero__image"
-        />
-        <div className="category-hero__text">
-          <h1>{categoryData.name}</h1>
-          <p>Изучайте курсы по категории {categoryData.name} и улучшайте свои навыки!</p>
-        </div>
-      </div>
-
-      {/* Courses Grid */}
-      <div className="course-grid">
-        {categoryData.courses.map((course) => (
-          <CourseCard
+    <div className="max-w-7xl mx-auto px-4 py-8 pt-[100px] sm:pt-[90px]"> {/* Added padding to match header height */}
+      <h1 className="text-3xl font-bold text-teal-700 mb-6">
+        {selectedCategory.name}
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {selectedCategory.courses.map((course) => (
+          <Link
+            to={`/course/${course.id}`} // Navigate to individual course page
             key={course.id}
-            id={course.id}
-            image={course.image}
-            title={course.name}
-            description={course.description}
-            price={course.price}
-          />
+            className="group border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition"
+          >
+            <img
+              src={course.image}
+              alt={course.name}
+              className="w-full h-48 object-cover group-hover:scale-105 transition-transform"
+            />
+            <div className="p-4">
+              <h2 className="text-lg font-bold text-teal-800 group-hover:text-blue-600">
+                {course.name}
+              </h2>
+              <p className="text-gray-700">{course.description}</p>
+              <p className="text-teal-600 font-bold mt-2">{course.price}</p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
@@ -51,6 +52,9 @@ const ProductTypePage = () => {
 };
 
 export default ProductTypePage;
+
+
+
 
 
 

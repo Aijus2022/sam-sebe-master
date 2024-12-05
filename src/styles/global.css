@@ -1,41 +1,5 @@
-body {
-  font-family: Arial, sans-serif;
-  color: var(--dark-gray);
- }
-.app-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Full viewport height */
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.main-content {
-  flex: 1;  /* This pushes the footer to the bottom if content is small */
-}
-
-/* Footer styles */
-footer {
-  background-color: #006c6c; /* Footer background color */
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow above the footer */
-  margin-top: auto; /* Ensure footer sticks to the bottom when content is small */
-}
-header {
-  position: fixed; /* Keeps the header fixed at the top */
-  top: 0; /* Positions the header at the very top */
-  left: 0; /* Aligns the header to the left */
-  width: 100%; /* Ensures the header spans the full width of the viewport */
-  z-index: 1000; /* Ensures the header stays above all other content */
-  background-color: rgba(0, 108, 108, 0.9); /* Semi-transparent background for visibility */
-  color: white; /* White text for contrast */
-  padding: 15px 20px; /* Adds spacing inside the header */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds subtle shadow for depth */
-  
-}
-
-/* To prevent content from being hidden underneath the header */
-.main-content {
-  padding-top: 70px; /* Adjust based on the header's height */
-}
-
+/* Additional global styles can go here if needed */

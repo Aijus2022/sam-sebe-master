@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import { useBasket } from '../context/BasketContext'; // Access the global context
-import '../styles/Basket.css';
 
 const Basket = () => {
   const { items, removeItem, decreaseQuantity, clearBasket } = useBasket();
@@ -37,30 +36,39 @@ const Basket = () => {
   }, []);
 
   return (
-    <div className="basket">
-      <h2 className="basket__title">Корзина</h2>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <h2 className="text-3xl font-bold mb-6">Корзина</h2>
       {items.length === 0 ? (
-        <p className="basket__empty">Ваша корзина пуста</p>
+        <p className="text-center text-gray-600">Ваша корзина пуста</p>
       ) : (
-        <ul className="basket__list">
+        <ul className="space-y-4">
           {items.map((item) => (
-            <li key={item.id} className="basket__item">
-              <img src={item.image} alt={item.title} className="basket__item-image" />
-              <div className="basket__item-info">
-                <h3 className="basket__item-title">{item.title}</h3>
-                <p className="basket__item-quantity">Количество: {item.quantity}</p>
-                <p className="basket__item-price">Цена: {item.price * item.quantity} сом</p>
+            <li
+              key={item.id}
+              className="flex items-center bg-white rounded-lg shadow p-4 space-x-4"
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-24 h-24 object-cover rounded-lg"
+              />
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold">{item.title}</h3>
+                <p className="text-gray-600">Количество: {item.quantity}</p>
+                <p className="text-blue-600 font-bold">
+                  Цена: {item.price * item.quantity} сом
+                </p>
               </div>
-              <div className="basket__item-actions">
+              <div className="space-y-2">
                 <button
-                  className="basket__decrease-button"
                   onClick={() => decreaseQuantity(item.id)}
+                  className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600 transition"
                 >
                   Уменьшить
                 </button>
                 <button
-                  className="basket__remove-button"
                   onClick={() => removeItem(item.id)}
+                  className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition"
                 >
                   Удалить
                 </button>
@@ -70,12 +78,18 @@ const Basket = () => {
         </ul>
       )}
       {items.length > 0 && (
-        <div className="basket__summary">
-          <p className="basket__total">Итого: {totalPrice} сом</p>
-          <button className="basket__clear-button" onClick={clearBasket}>
+        <div className="mt-6 space-y-4">
+          <p className="text-xl font-bold">Итого: {totalPrice} сом</p>
+          <button
+            onClick={clearBasket}
+            className="w-full px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700 transition"
+          >
             Очистить корзину
           </button>
-          <Link to="/checkout" className="basket__checkout-link">
+          <Link
+            to="/checkout"
+            className="block w-full text-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          >
             Перейти к оформлению
           </Link>
         </div>
